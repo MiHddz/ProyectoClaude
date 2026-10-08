@@ -7,7 +7,7 @@
   <meta name="description" content="Sonrisa Imperial, clínica dental para toda la familia. Agenda tu cita en minutos.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,31 +19,62 @@
       </svg>
       Sonrisa <span>Imperial</span>
     </a>
-    <a href="#agendar" class="link">Agendar cita</a>
+    <div class="header-right">
+      <span class="hours">Lun a Vie · 9:00 a 18:00</span>
+      <a href="#agendar" class="btn btn-small">Agendar cita</a>
+    </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-text">
         <p class="eyebrow">Clínica dental familiar</p>
-        <h1>Sonrisas felices, <span class="hl">sin miedo</span> al dentista.</h1>
-        <p class="lead">Cuidamos los dientes de los más pequeños y de toda la familia, con paciencia, cariño y tecnología moderna.</p>
-        <a href="#agendar" class="btn">Agendar mi cita</a>
+        <h1>Sonrisas sanas para <span class="hl">toda la familia</span>.</h1>
+        <p class="lead">Odontología general y pediátrica con un trato cercano. Hacemos que cada visita, también la de los más pequeños, sea tranquila y sin miedo.</p>
+        <div class="hero-actions">
+          <a href="#agendar" class="btn">Agendar mi cita</a>
+          <span class="note">Confirmamos tu cita por WhatsApp</span>
+        </div>
       </div>
-      <div class="faces" id="faces" aria-hidden="true"></div>
+      <div class="faces-card" aria-hidden="true">
+        <div class="faces" id="faces"></div>
+      </div>
     </section>
 
-    <div class="ribbon" aria-hidden="true">
-      <div class="ribbon-track">
-        <span>Primera visita divertida</span><span>Odontopediatría</span><span>Limpiezas</span><span>Ortodoncia</span><span>Atención para toda la familia</span>
-        <span>Primera visita divertida</span><span>Odontopediatría</span><span>Limpiezas</span><span>Ortodoncia</span><span>Atención para toda la familia</span>
+    <section class="services" aria-label="Servicios">
+      <div class="service">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4 0 7 2.5 7 6.5 0 5.5-3.5 11.5-7 11.5S5 15 5 9.5C5 5.5 8 3 12 3z"/><path d="M9 10.5c1 1.2 5 1.2 6 0"/></svg>
+        <div>
+          <h3>Odontopediatría</h3>
+          <p>Atención pensada para niños, desde su primera visita.</p>
+        </div>
       </div>
-    </div>
+      <div class="service">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10l-1 6H8z"/><path d="M12 10v10"/><path d="M8 20h8"/></svg>
+        <div>
+          <h3>Limpieza y prevención</h3>
+          <p>Revisiones periódicas para mantener dientes y encías sanos.</p>
+        </div>
+      </div>
+      <div class="service">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18"/><path d="M6 9v6M10 9v6M14 9v6M18 9v6"/></svg>
+        <div>
+          <h3>Ortodoncia</h3>
+          <p>Corrección de la mordida y alineación dental para todas las edades.</p>
+        </div>
+      </div>
+    </section>
 
     <section class="booking" id="agendar">
       <div class="booking-intro">
+        <p class="eyebrow">Citas</p>
         <h2>Agenda tu cita</h2>
         <p>Déjanos tus datos y te confirmaremos la cita lo antes posible.</p>
+        <ul class="checks">
+          <li>Respuesta el mismo día hábil</li>
+          <li>Horario de lunes a viernes, 9:00 a 18:00</li>
+          <li>Pacientes de todas las edades</li>
+        </ul>
       </div>
 
       <form id="booking-form" class="form" novalidate>
