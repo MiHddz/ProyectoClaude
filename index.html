@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sonrisa Imperial · Clínica Dental</title>
+  <meta name="description" content="Sonrisa Imperial, clínica dental. Agenda tu cita en minutos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">Sonrisa <span>Imperial</span></a>
+    <a href="#agendar" class="link">Agendar cita</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Clínica dental</p>
+      <h1>Tu sonrisa, en las mejores manos.</h1>
+      <p class="lead">Atención cercana, tecnología moderna y resultados naturales. Reserva tu cita en menos de un minuto.</p>
+      <a href="#agendar" class="btn">Agendar mi cita</a>
+    </section>
+
+    <section class="booking" id="agendar">
+      <div class="booking-intro">
+        <h2>Agenda tu cita</h2>
+        <p>Déjanos tus datos y te confirmaremos la cita lo antes posible.</p>
+      </div>
+
+      <form id="booking-form" class="form" novalidate>
+        <label>
+          Nombre completo
+          <input type="text" name="nombre" autocomplete="name" required>
+        </label>
+        <label>
+          Teléfono
+          <input type="tel" name="telefono" autocomplete="tel" required>
+        </label>
+        <div class="row">
+          <label>
+            Fecha
+            <input type="date" name="fecha" required>
+          </label>
+          <label>
+            Hora
+            <select name="hora" required>
+              <option value="">Selecciona</option>
+              <option>09:00</option>
+              <option>10:00</option>
+              <option>11:00</option>
+              <option>12:00</option>
+              <option>15:00</option>
+              <option>16:00</option>
+              <option>17:00</option>
+            </select>
+          </label>
+        </div>
+        <label>
+          <span>Motivo de la consulta <span class="optional">(opcional)</span></span>
+          <textarea name="motivo" rows="3"></textarea>
+        </label>
+        <button type="submit" class="btn btn-block">Solicitar cita</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Sonrisa Imperial · Clínica Dental</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
