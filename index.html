@@ -3,26 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sonrisa Imperial · Clínica Dental</title>
-  <meta name="description" content="Sonrisa Imperial, clínica dental. Agenda tu cita en minutos.">
+  <title>Sonrisa Imperial</title>
+  <meta name="description" content="Sonrisa Imperial, clínica dental para toda la familia. Agenda tu cita en minutos.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="header">
-    <a href="#" class="logo">Sonrisa <span>Imperial</span></a>
+    <a href="#" class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <path class="crown" d="M7 10 L9.5 3 L13 7.5 L16 2 L19 7.5 L22.5 3 L25 10 Z"/>
+        <path class="tooth" d="M8 13c0-2 2-3 4-3 1.6 0 2.6.8 4 .8s2.4-.8 4-.8c2 0 4 1 4 3 0 3-1 5-1.6 8-.5 2.6-1 6-2.6 6-1.8 0-1.6-5-3.8-5s-2 5-3.8 5c-1.6 0-2.1-3.4-2.6-6C9 18 8 16 8 13z"/>
+      </svg>
+      Sonrisa <span>Imperial</span>
+    </a>
     <a href="#agendar" class="link">Agendar cita</a>
   </header>
 
   <main>
     <section class="hero">
-      <p class="eyebrow">Clínica dental</p>
-      <h1>Tu sonrisa, en las mejores manos.</h1>
-      <p class="lead">Atención cercana, tecnología moderna y resultados naturales. Reserva tu cita en menos de un minuto.</p>
-      <a href="#agendar" class="btn">Agendar mi cita</a>
+      <div class="hero-text">
+        <p class="eyebrow">Clínica dental familiar</p>
+        <h1>Sonrisas felices, <span class="hl">sin miedo</span> al dentista.</h1>
+        <p class="lead">Cuidamos los dientes de los más pequeños y de toda la familia, con paciencia, cariño y tecnología moderna.</p>
+        <a href="#agendar" class="btn">Agendar mi cita</a>
+      </div>
+      <div class="faces" id="faces" aria-hidden="true"></div>
     </section>
+
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon-track">
+        <span>Primera visita divertida</span><span>Odontopediatría</span><span>Limpiezas</span><span>Ortodoncia</span><span>Atención para toda la familia</span>
+        <span>Primera visita divertida</span><span>Odontopediatría</span><span>Limpiezas</span><span>Ortodoncia</span><span>Atención para toda la familia</span>
+      </div>
+    </div>
 
     <section class="booking" id="agendar">
       <div class="booking-intro">
@@ -31,22 +47,22 @@
       </div>
 
       <form id="booking-form" class="form" novalidate>
-        <label>
+        <label for="nombre">
           Nombre completo
-          <input type="text" name="nombre" autocomplete="name" required>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
         </label>
-        <label>
+        <label for="telefono">
           Teléfono
-          <input type="tel" name="telefono" autocomplete="tel" required>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel" required>
         </label>
         <div class="row">
-          <label>
+          <label for="fecha">
             Fecha
-            <input type="date" name="fecha" required>
+            <input type="date" id="fecha" name="fecha" required>
           </label>
-          <label>
+          <label for="hora">
             Hora
-            <select name="hora" required>
+            <select id="hora" name="hora" required>
               <option value="">Selecciona</option>
               <option>09:00</option>
               <option>10:00</option>
@@ -58,9 +74,9 @@
             </select>
           </label>
         </div>
-        <label>
+        <label for="motivo">
           <span>Motivo de la consulta <span class="optional">(opcional)</span></span>
-          <textarea name="motivo" rows="3"></textarea>
+          <textarea id="motivo" name="motivo" rows="3"></textarea>
         </label>
         <button type="submit" class="btn btn-block">Solicitar cita</button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
